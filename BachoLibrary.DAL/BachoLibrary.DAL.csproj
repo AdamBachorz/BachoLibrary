@@ -1,7 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Adam Bachorz</Authors>
+    <Description>Biblioteka ogólnego przeznaczenia - warstwa dostępu do danych</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/AdamBachorz/BachoLibrary</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
