@@ -7,7 +7,7 @@ namespace BachoLibrary.DAL
 {
     public interface ICustomConfig
     {
-        DataBase DataBase { get; set }
+        DataBase DataBase { get; set; }
         bool IsProduction { get; set; }
         string ConnectionString { get; set; }
     }

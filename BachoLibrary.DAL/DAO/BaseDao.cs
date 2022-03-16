@@ -1,7 +1,6 @@
-﻿using NHibernate;
+﻿using BachoLibrary.DAL.NHibernate;
+using NHibernate;
 using NHibernate.Criterion;
-using VirtualWallet.DAL.Config;
-using VirtualWallet.Model.Domain;
 using System;
 using System.Collections.Generic;
 using System.Data;

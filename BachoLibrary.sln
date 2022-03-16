@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachoLibrary.Web", "BachoLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachoLibrary.DAL", "BachoLibrary.DAL\BachoLibrary.DAL.csproj", "{631FAF24-D21A-4286-A656-28E030B2BA1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachoLibrary.Tests", "BachoLibrary.Tests\BachoLibrary.Tests.csproj", "{1CD459E1-5431-419C-AA2A-99D12A76E05A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{631FAF24-D21A-4286-A656-28E030B2BA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{631FAF24-D21A-4286-A656-28E030B2BA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{631FAF24-D21A-4286-A656-28E030B2BA1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD459E1-5431-419C-AA2A-99D12A76E05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD459E1-5431-419C-AA2A-99D12A76E05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD459E1-5431-419C-AA2A-99D12A76E05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD459E1-5431-419C-AA2A-99D12A76E05A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace VirtualWallet.DAL.Config
+namespace BachoLibrary.DAL.NHibernate
 {
     public class NHibernateHelper : INHibernateHelper
     {
