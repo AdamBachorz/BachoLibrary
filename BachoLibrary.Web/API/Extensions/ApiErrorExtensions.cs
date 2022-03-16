@@ -1,9 +1,11 @@
-﻿using System;
+﻿using BachoLibrary.Common;
+using BachoLibrary.Common.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BachoLibrary.Common.Extensions
+namespace BachoLibrary.Web.API.Extensions
 {
     public static class ApiErrorExtensions
     {
