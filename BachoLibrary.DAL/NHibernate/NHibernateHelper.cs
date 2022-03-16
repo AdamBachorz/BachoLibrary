@@ -28,7 +28,6 @@ namespace VirtualWallet.DAL.Config
             _sessionFactory = _configuration.BuildSessionFactory();
         }
 
-
         private void Mapping(MappingConfiguration mapping)
         {
             // Make it universal

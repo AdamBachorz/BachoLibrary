@@ -7,6 +7,7 @@ namespace BachoLibrary.DAL
 {
     public class CustomConfig : ICustomConfig
     {
+        public DataBase DataBase { get; set; }
         public bool IsProduction { get; set; }
         public string ConnectionString { get; set; }
 
@@ -15,8 +16,9 @@ namespace BachoLibrary.DAL
 
         }
 
-        public CustomConfig(bool isProduction, string connectionString)
+        public CustomConfig(DataBase dataBase, bool isProduction, string connectionString)
         {
+            DataBase = dataBase;
             IsProduction = isProduction;
             ConnectionString = connectionString;
         }

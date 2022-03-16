@@ -17,8 +17,15 @@ namespace BachoLibrary.DAL.NHibernate
         {
 
         }
-        public FluentNHibernateCustomConfig(bool isProduction, string connectionString)
+        public FluentNHibernateCustomConfig(ICustomConfig customConfig)
         {
+            DataBase = customConfig.DataBase;
+            IsProduction = customConfig.IsProduction;
+            ConnectionString = customConfig.ConnectionString;
+        }
+        public FluentNHibernateCustomConfig(DataBase dataBase, bool isProduction, string connectionString)
+        {
+            DataBase = dataBase;
             IsProduction = isProduction;
             ConnectionString = connectionString;
         }
