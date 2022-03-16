@@ -30,11 +30,12 @@ namespace BachoLibrary.DAL.NHibernate
             ConnectionString = connectionString;
         }
 
-        public FluentConfiguration BuildNHibernateConfigurationForDataBase()
+        public FluentConfiguration BuildNHibernateConfiguration()
         {
             return Fluently.Configure()
                 .Database(BuildPersistenceConfigurer(DataBase))
-                .Mappings(Mapping);
+                .Mappings(Mapping)
+                ;
         }
 
         private IPersistenceConfigurer BuildPersistenceConfigurer(DataBase dataBase)

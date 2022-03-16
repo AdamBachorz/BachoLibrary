@@ -8,6 +8,6 @@ namespace BachoLibrary.DAL.NHibernate
     public interface IFluentNHibernateCustomConfig : ICustomConfig
     {
         Action<MappingConfiguration> Mapping { get; set; }
-        FluentConfiguration BuildNHibernateConfigurationForDataBase();
+        FluentConfiguration BuildNHibernateConfiguration();
     }
 }
