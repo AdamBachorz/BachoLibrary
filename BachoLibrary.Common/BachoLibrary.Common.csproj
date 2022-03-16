@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Adam Bachorz</Authors>
+    <Company />
+    <Product>BachoLibrary.Common</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/AdamBachorz/BachoLibrary</RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <Description>Biblioteka ogólnego przeznaczenia</Description>
   </PropertyGroup>
 
 </Project>
