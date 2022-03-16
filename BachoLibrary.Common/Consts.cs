@@ -12,7 +12,6 @@ namespace BachoLibrary.Common
         {
             public const string DayFirst = "dd-MM-yyyy";
             public const string YearFirst = "yyyy-MM-dd";
-            public const string Default = YearFirst;
             public const string DateFirstWithTime = "yyyy-MM-dd HH:mm:ss";
             public const string DayFirstWithTime = "MM-dd-yyyy HH:mm:ss";
             public const string Compact = "yyyyMMddhhmmss";

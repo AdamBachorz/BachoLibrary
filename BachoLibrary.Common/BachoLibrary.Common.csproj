@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Adam Bachorz</Authors>
     <Company />
     <Product>BachoLibrary.Common</Product>
@@ -10,6 +10,8 @@
     <RepositoryUrl>https://github.com/AdamBachorz/BachoLibrary</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <Description>Biblioteka ogólnego przeznaczenia</Description>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Test change</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
