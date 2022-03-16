@@ -1,13 +1,13 @@
-﻿using BachoLibrary.DAL.NHibernate;
+﻿using BachorzLibrary.DAL.NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
-using BachoLibrary.DAL;
+using BachorzLibrary.DAL;
 using System.ComponentModel;
-using BachoLibrary.DAL.DAO;
+using BachorzLibrary.DAL.DAO;
 
-namespace BachoLibrary.Tests.DAL.NHibernate
+namespace BachorzLibrary.Tests.DAL.NHibernate
 {
     class NHibernateTests
     {

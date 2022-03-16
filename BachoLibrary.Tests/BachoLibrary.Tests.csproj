@@ -15,10 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BachoLibrary.Common\BachoLibrary.Common.csproj" />
-    <ProjectReference Include="..\BachoLibrary.DAL\BachoLibrary.DAL.csproj" />
-    <ProjectReference Include="..\BachoLibrary.Desktop\BachoLibrary.Desktop.csproj" />
-    <ProjectReference Include="..\BachoLibrary.Web\BachoLibrary.Web.csproj" />
+    <ProjectReference Include="..\BachorzLibrary.Common\BachorzLibrary.Common.csproj" />
+    <ProjectReference Include="..\BachorzLibrary.DAL\BachorzLibrary.DAL.csproj" />
   </ItemGroup>
 
 </Project>
