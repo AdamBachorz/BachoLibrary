@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace BachoLibrary.Extensions
+namespace BachoLibrary.Common.Extensions
 {
     public static class MatchExtensions
     {
@@ -28,10 +28,8 @@ namespace BachoLibrary.Extensions
 
             return match.Groups[groupName]?.Value.OrDefault(defaultValue);
         }
+
         public static string GroupOrEmpty(this Match match, string groupName) => GroupOrDefault(match, groupName, string.Empty);
-
-
-
 
         public static IEnumerable<Match> ToEnumerable(this MatchCollection matchCollection)
         {

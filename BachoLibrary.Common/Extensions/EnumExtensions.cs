@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace BachoLibrary.Extensions
+namespace BachoLibrary.Common.Extensions
 {
     public static class EnumExtensions
     {

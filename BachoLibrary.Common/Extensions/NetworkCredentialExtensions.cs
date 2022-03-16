@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
-namespace BachoLibrary.Extensions
+namespace BachoLibrary.Common.Extensions
 {
     public static class NetworkCredentialExtensions
     {

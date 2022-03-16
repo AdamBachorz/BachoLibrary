@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BachoLibrary.Extensions
+namespace BachoLibrary.Common.Extensions
 {
     public static class CollectionExtensions
     {
