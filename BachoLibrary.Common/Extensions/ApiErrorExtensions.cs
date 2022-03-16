@@ -10,6 +10,6 @@ namespace BachoLibrary.Common.Extensions
         public static string ErrorString(this IEnumerable<ApiError> apiErrors, string separator = Consts.DefaultStringEnumerator)
         {
             return apiErrors.Select(ae => ae.ToString()).WithoutEmptyValues().Join(separator);
-        } 
+        }
     }
 }
