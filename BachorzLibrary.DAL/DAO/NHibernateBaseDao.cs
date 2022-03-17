@@ -9,11 +9,11 @@ using System.Linq;
 
 namespace BachorzLibrary.DAL.DAO
 {
-    public abstract class BaseDao<E> : IBaseDao<E> where E : Entity 
+    public abstract class NHibernateBaseDao<E> : IBaseDao<E> where E : Entity 
     {
         protected readonly INHibernateHelper _nHibernateHelper;
 
-        public BaseDao(INHibernateHelper nHibernateHelper)
+        public NHibernateBaseDao(INHibernateHelper nHibernateHelper)
         {
             _nHibernateHelper = nHibernateHelper;
         }

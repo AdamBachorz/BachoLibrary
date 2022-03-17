@@ -38,7 +38,7 @@ namespace BachorzLibrary.Tests.DAL.NHibernate
             }
         }
 
-        class UserDao : BaseDao<User>
+        class UserDao : NHibernateBaseDao<User>
         {
             public UserDao(INHibernateHelper nHibernateHelper) : base(nHibernateHelper)
             {
