@@ -9,7 +9,8 @@ using BachorzLibrary.DAL.DAO;
 
 namespace BachorzLibrary.Tests.DAL.NHibernate
 {
-    class NHibernateTests
+    [TestFixture]
+    public class NHibernateTests
     {
         IFluentNHibernateCustomConfig _config;
         INHibernateHelper _nHibernateHelper;
@@ -60,13 +61,13 @@ namespace BachorzLibrary.Tests.DAL.NHibernate
         }
 
         [Test]
-        public void ShouldNotThrow()
+        public void ShouldNotThrow_GetOneById()
         {
             Assert.DoesNotThrow(() => _dao.GetOneById(1));
         }
 
         [Test]
-        public void ShouldReturnEntity()
+        public void ShouldReturnEntity_GetOneById()
         {
             var entity = _dao.GetOneById(1);
             Assert.That(entity, Is.Not.Null);
