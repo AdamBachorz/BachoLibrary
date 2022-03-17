@@ -9,10 +9,10 @@ namespace BachorzLibrary.Web.Config
 {
     public class DependencyInjectionHelper
     {
-        public static void RegisterBasics<C>(IServiceCollection services, Func<IServiceProvider, C> customConfig)
+        public static void RegisterBasics<C>(IServiceCollection services, Func<IServiceProvider, C> customConfig) where C : class
         {
             // TBE
-            //services.AddSingleton<C>(customConfig);
+            services.AddSingleton(customConfig);
             services.AddScoped<INHibernateHelper, NHibernateHelper>();
         }
     }
