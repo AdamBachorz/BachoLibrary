@@ -10,7 +10,7 @@ namespace BachoLibrary.Tests.Common.Extensions
     public class DictionaryExtensionsTests
     {
         [Test]
-        public void ShouldREturnValueOrDefault_GetValueIfExists()
+        public void ShouldReturnValueOrDefault_GetValueIfExists()
         {
             var _dictionary = new Dictionary<int, string>()
             {

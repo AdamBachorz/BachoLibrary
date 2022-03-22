@@ -4,6 +4,9 @@ using System.Text;
 
 namespace BachorzLibrary.Common
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Consts
     {
         public const string DefaultStringEnumerator = ", ";
