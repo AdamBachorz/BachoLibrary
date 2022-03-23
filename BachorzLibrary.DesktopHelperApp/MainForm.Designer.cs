@@ -34,18 +34,19 @@ namespace BachorzLibrary.DesktopHelperApp
             // 
             // buttonNugetPacker
             // 
-            this.buttonNugetPacker.Location = new System.Drawing.Point(61, 87);
+            this.buttonNugetPacker.Location = new System.Drawing.Point(83, 37);
             this.buttonNugetPacker.Name = "buttonNugetPacker";
             this.buttonNugetPacker.Size = new System.Drawing.Size(96, 23);
             this.buttonNugetPacker.TabIndex = 0;
             this.buttonNugetPacker.Text = "Nuget Packer";
             this.buttonNugetPacker.UseVisualStyleBackColor = true;
+            this.buttonNugetPacker.Click += new System.EventHandler(this.buttonNugetPacker_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(279, 114);
             this.Controls.Add(this.buttonNugetPacker);
             this.Name = "MainForm";
             this.Text = "Desktop Helper App";

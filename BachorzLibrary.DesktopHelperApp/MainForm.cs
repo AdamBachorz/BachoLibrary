@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BachorzLibrary.DesktopHelperApp.OtherForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,16 @@ namespace BachorzLibrary.DesktopHelperApp
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private NugetPackerForm _nugetPackerForm;
+        public MainForm(NugetPackerForm nugetPackerForm)
         {
             InitializeComponent();
+            _nugetPackerForm = nugetPackerForm;
         }
 
+        private void buttonNugetPacker_Click(object sender, EventArgs e)
+        {
+            _nugetPackerForm.ShowDialog();
+        }
     }
 }
