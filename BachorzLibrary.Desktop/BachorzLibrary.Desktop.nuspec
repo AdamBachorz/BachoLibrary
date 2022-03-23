@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>BachorzLibrary.Desktop</id>
+    <version>1.0.0</version>
+    <title>BachorzLibrary.Desktop</title>
+    <authors>Adam Bachorz</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <description>Biblioteka ogólnego przeznaczenia - aplikacja okienkowa</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>BachorzLibrary Desktop bachorz</tags>
+  </metadata>
+</package>

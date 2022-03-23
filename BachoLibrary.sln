@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BachorzLibrary.Web", "Bacho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.Desktop", "BachorzLibrary.Desktop\BachorzLibrary.Desktop.csproj", "{266C961F-9AB9-45C6-93B4-625A6FF68921}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BachorzLibrary.NetFrameworkPackageCreator", "BachorzLibrary.NetFrameworkPackageCreator\BachorzLibrary.NetFrameworkPackageCreator.csproj", "{7F8B41F2-575E-454D-9707-CB113210B9DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.DesktopHelperApp", "BachorzLibrary.DesktopHelperApp\BachorzLibrary.DesktopHelperApp.csproj", "{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{266C961F-9AB9-45C6-93B4-625A6FF68921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{266C961F-9AB9-45C6-93B4-625A6FF68921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{266C961F-9AB9-45C6-93B4-625A6FF68921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F8B41F2-575E-454D-9707-CB113210B9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8B41F2-575E-454D-9707-CB113210B9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8B41F2-575E-454D-9707-CB113210B9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8B41F2-575E-454D-9707-CB113210B9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

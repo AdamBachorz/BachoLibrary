@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BachorzLibrary.Common\BachorzLibrary.Common.csproj" />
+    <ProjectReference Include="..\BachorzLibrary.Desktop\BachorzLibrary.Desktop.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Files\CurrentVersion.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
