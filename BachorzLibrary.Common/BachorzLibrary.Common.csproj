@@ -5,6 +5,8 @@
     <Description>Biblioteka ogólnego przeznaczenia</Description>
     <Authors>Adam Bachorz</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Add Document generator</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
