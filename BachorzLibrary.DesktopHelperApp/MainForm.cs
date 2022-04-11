@@ -14,15 +14,22 @@ namespace BachorzLibrary.DesktopHelperApp
     public partial class MainForm : Form
     {
         private NugetPackerForm _nugetPackerForm;
-        public MainForm(NugetPackerForm nugetPackerForm)
+        private PoligonForm _poligonForm;
+        public MainForm(NugetPackerForm nugetPackerForm, PoligonForm poligonForm)
         {
             InitializeComponent();
             _nugetPackerForm = nugetPackerForm;
+            _poligonForm = poligonForm;
         }
 
         private void buttonNugetPacker_Click(object sender, EventArgs e)
         {
             _nugetPackerForm.ShowDialog();
+        }
+
+        private void buttonPoligon_Click(object sender, EventArgs e)
+        {
+            _poligonForm.ShowDialog();
         }
     }
 }

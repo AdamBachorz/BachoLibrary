@@ -14,6 +14,7 @@ namespace BachorzLibrary.DesktopHelperApp.Classes.Config
         {
             // Forms
             container.Register<NugetPackerForm>();
+            container.Register<PoligonForm>();
         }
     }
 }
