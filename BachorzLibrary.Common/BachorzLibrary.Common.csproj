@@ -7,4 +7,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DocX" Version="2.1.0" />
+  </ItemGroup>
+
 </Project>
