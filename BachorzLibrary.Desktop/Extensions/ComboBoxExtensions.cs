@@ -16,5 +16,15 @@ namespace BachorzLibrary.Desktop.Extensions
             comboBox.SelectedIndex = -1;
             return data.ToList();
         }
+
+        public static void LoadWithEnums<E>(this ComboBox comboBox) where E : Enum
+        {
+            comboBox.Items.Clear();
+            foreach (var enumValue in Enum.GetValues(typeof(E)))
+            {
+                comboBox.Items.Add(enumValue);
+            }
+            comboBox.SelectedIndex = -1;
+        }
     }
 }
