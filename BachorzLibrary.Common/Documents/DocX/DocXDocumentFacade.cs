@@ -20,21 +20,6 @@ namespace BachorzLibrary.Common.Documents.DocX
             _addFooter = addFooter;
 
             _doc = Xceed.Words.NET.DocX.Create(_fileInfo.FullName);
-
-            if (addHeader)
-            {
-                _doc.AddHeaders();
-                var header = _doc.Headers.Odd;
-                HeaderContent(header.InsertParagraph());
-            }
-            if (addFooter)
-            {
-                _doc.AddFooters();
-                var footer = _doc.Footers.Odd;
-                FooterContent(footer.InsertParagraph());
-            }
-
-            MainDocumentContent(_doc);
         }
 
         public DocXDocumentFacade(string fileName, bool addHeader = false, bool addFooter = false) : this(new FileInfo(fileName), addHeader, addFooter)
@@ -42,17 +27,31 @@ namespace BachorzLibrary.Common.Documents.DocX
             
         }
 
-        public void Save()
+        public void BuildDocumentAndSave()
         {
+            if (_addHeader)
+            {
+                _doc.AddHeaders();
+                var header = _doc.Headers.Odd;
+                HeaderContent(header.InsertParagraph());
+            }
+            if (_addFooter)
+            {
+                _doc.AddFooters();
+                var footer = _doc.Footers.Odd;
+                FooterContent(footer.InsertParagraph());
+            }
+
+            MainDocumentContent(_doc);
             _doc.Save();
         }
 
         protected abstract void MainDocumentContent(Xceed.Words.NET.DocX doc);
-        public virtual void HeaderContent(Paragraph paragraph)
+        protected virtual void HeaderContent(Paragraph paragraph)
         {
             if (_addHeader) throw new NotImplementedException();
         }
-        public virtual void FooterContent(Paragraph paragraph)
+        protected virtual void FooterContent(Paragraph paragraph)
         {
             if (_addFooter) throw new NotImplementedException();
         }
