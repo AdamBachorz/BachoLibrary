@@ -50,8 +50,8 @@ namespace BachorzLibrary.DesktopHelperApp.OtherForms
                 var document = new TestDocument(fileInfo, true, false);
                 var documentHF = new TestDocumentHeaderFooter(fileInfoHF, true, true);
 
-                document.Save();
-                documentHF.Save();
+                document.BuildDocumentAndSave();
+                documentHF.BuildDocumentAndSave();
 
                 sb.AppendLine("Wygenerowano");
             },

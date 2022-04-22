@@ -1,4 +1,5 @@
 ﻿using BachorzLibrary.DesktopHelperApp.Classes;
+using BachorzLibrary.Common.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,25 +10,29 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using BachorzLibrary.Common.Utils;
 
 namespace BachorzLibrary.DesktopHelperApp.OtherForms
 {
     public partial class NugetPackerForm : Form
     {
-        private readonly string _workingDirectory = @"F:\C#\BachoLibrary\BachoLibrary\BachorzLibrary.Desktop";
+        private string _upcomingVersion;
+        private readonly string _releasedPackagesDirectory;
 
         public NugetPackerForm()
         {
             InitializeComponent();
+            _releasedPackagesDirectory = Path.Combine(Codes.LibraryDesktopWorkingDirectory, "bin\\Release", Codes.NugetPackagesDirectory);
+            GetUpcomingVersionAndUpdateLabel();
         }
+
 
         private void buttonPack_Click(object sender, EventArgs e)
         {
+            var previousVersion = new string(_upcomingVersion);
             try
             {
-                var version = File.ReadAllText(Codes.CurrentVersionFile);
-
-                var command = Codes.PackCommand + version;
+                var command = Codes.PackCommand + _upcomingVersion;
                 var proc = new Process
                 {
                     StartInfo = new ProcessStartInfo
@@ -36,50 +41,71 @@ namespace BachorzLibrary.DesktopHelperApp.OtherForms
                         Arguments = command,
                         UseShellExecute = false,
                         RedirectStandardOutput = true,
-                        CreateNoWindow = true,
-                        WorkingDirectory = _workingDirectory
-                    }
+                        CreateNoWindow = true, 
+                        WorkingDirectory = _releasedPackagesDirectory
+                    },
                 };
 
+                IncrementVersion(saveToFile: true);
+                GetUpcomingVersionAndUpdateLabel();
                 proc.Start();
-
-                // Change it
-                var packageName = Path.Combine(_workingDirectory, $"BachorzLibrary.Desktop.{version}.nupkg");
-                var destination = Path.Combine(_workingDirectory, "bin\\Release", Codes.NugetPackagesDirectory, packageName);
-
-                File.Move(packageName, destination);
-                IncrementVersion(version);
+                
             }
             catch (Exception ex)
             {
+                if (_upcomingVersion != previousVersion)
+                {
+                    File.WriteAllText(Codes.UpcomingVersionFile, previousVersion);
+                    _upcomingVersion = previousVersion;
+                    labelUpcomingVersion.Text = _upcomingVersion;
+                }
                 MessageBox.Show(ex.Message);
             }
         }
-
-        public static void IncrementVersion(string currentVersion)
+        private void buttonOpenPackagesDirectory_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(currentVersion))
+            Process.Start("explorer.exe", _releasedPackagesDirectory);
+        }
+
+        private void GetUpcomingVersionAndUpdateLabel()
+        {
+            _upcomingVersion = File.ReadAllText(Codes.UpcomingVersionFile);
+            labelUpcomingVersion.Text = _upcomingVersion;
+        }
+
+        private string IncrementVersion(bool saveToFile)
+        {
+            if (_upcomingVersion.HasNotValue())
             {
-                currentVersion = File.ReadAllText(Codes.CurrentVersionFile);
+                _upcomingVersion = File.ReadAllText(Codes.UpcomingVersionFile);
             }
-            var match = Regex.Match(currentVersion, @"(?<first>\d+)\.(?<second>\d+)\.(?<last>\d+)");
-            var first = Convert.ToInt32(match.Groups["first"].Value);
-            var second = Convert.ToInt32(match.Groups["second"].Value);
-            var last = Convert.ToInt32(match.Groups["first"].Value);
+
+            var match = Regex.Match(_upcomingVersion, @"(?<first>\d+)\.(?<second>\d+)\.(?<last>\d+)");
+            var first = match.GroupOrEmpty("first").ToInt();
+            var second = match.GroupOrEmpty("second").ToInt();
+            var last = match.GroupOrEmpty("last").ToInt();
 
             last++;
-            if (last % 10 == 0)
+            if (last % 100 == 0)
             {
+                last = 0;
                 second++;
                 if (second % 10 == 0)
                 {
+                    second = 0;
                     first++;
                 }
             }
 
             var newVersion = $"{first}.{second}.{last}";
 
-            File.WriteAllText(Codes.CurrentVersionFile, newVersion);
+            if (saveToFile)
+            {
+                File.WriteAllText(Codes.UpcomingVersionFile, newVersion); 
+            }
+
+            return newVersion;
         }
+
     }
 }

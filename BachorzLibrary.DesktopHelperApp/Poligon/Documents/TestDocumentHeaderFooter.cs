@@ -14,11 +14,11 @@ namespace BachorzLibrary.DesktopHelperApp.Poligon.Documents
         {
         }
 
-        public override void HeaderContent(Paragraph paragraph)
+        protected override void HeaderContent(Paragraph paragraph)
         {
             paragraph.AppendLine("My header");
         }
-        public override void FooterContent(Paragraph paragraph)
+        protected override void FooterContent(Paragraph paragraph)
         {
             paragraph.AppendLine("My footer");
         }
