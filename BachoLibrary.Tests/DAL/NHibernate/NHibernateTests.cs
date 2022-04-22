@@ -28,7 +28,7 @@ namespace BachorzLibrary.Tests.DAL.NHibernate
             public virtual string Greeting => $"Witaj, {UserName}!";
         }
 
-        class UserMapping : EntityMapping<User>
+        class UserMapping : FluentNHibernateEntityMapping<User>
         {
             public UserMapping() : base("app_user")
             {

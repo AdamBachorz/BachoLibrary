@@ -13,15 +13,12 @@ namespace BachorzLibrary.NHibernate.Extensions
         public static IdentityPart Strategy(this IdentityGenerationStrategyBuilder<IdentityPart> identityGenerationStrategyBuilder, IdentityStrategy identityStrategy, string tablename)
         {
             string sequenceName = tablename + "_seq";
-            switch (identityStrategy)
+            return identityStrategy switch
             {
-                case IdentityStrategy.Sequance:
-                    return identityGenerationStrategyBuilder.Sequence(sequenceName);
-                case IdentityStrategy.Guid:
-                    return identityGenerationStrategyBuilder.Guid();
-                default:
-                    return identityGenerationStrategyBuilder.Sequence(sequenceName);
-            }
+                IdentityStrategy.Sequance => identityGenerationStrategyBuilder.Sequence(sequenceName),
+                IdentityStrategy.Guid => identityGenerationStrategyBuilder.Guid(),
+                _ => identityGenerationStrategyBuilder.Sequence(sequenceName),
+            };
         }
     }
 }
