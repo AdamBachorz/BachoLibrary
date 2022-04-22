@@ -64,7 +64,7 @@ namespace BachorzLibrary.DesktopHelperApp.OtherForms
         }
         private void buttonOpenPackagesDirectory_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", _releasedPackagesDirectory);
+            ProcessUtils.ForceOpenDirectory(_releasedPackagesDirectory);
         }
 
         private void GetUpcomingVersionAndUpdateLabel()

@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +48,18 @@
   <ItemGroup>
     <Compile Include="Config\ISimpleInjectorConfig.cs" />
     <Compile Include="Config\SimpleInjectorConfig.cs" />
+    <Compile Include="Controls\BaseCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseCustomControl.Designer.cs">
+      <DependentUpon>BaseCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditableLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditableLabel.Designer.cs">
+      <DependentUpon>EditableLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\ComboBoxExtensions.cs" />
     <Compile Include="Extensions\ControlExtensions.cs" />
     <Compile Include="Extensions\LabelExtensions.cs" />
@@ -56,6 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\EditableLabel.resx">
+      <DependentUpon>EditableLabel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
