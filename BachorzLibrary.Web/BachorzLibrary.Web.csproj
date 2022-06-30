@@ -5,6 +5,7 @@
     <Authors>Adam Bachorz</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>Biblioteka ogólnego przeznaczenia - do aplikacji webowych</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

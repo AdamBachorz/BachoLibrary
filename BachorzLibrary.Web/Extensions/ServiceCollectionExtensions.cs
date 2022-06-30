@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using BachorzLibrary.Web.Config;
+using BachorzLibrary.DAL.NHibernate;
 
 namespace BachorzLibrary.Web.Extensions
 {
@@ -15,6 +15,12 @@ namespace BachorzLibrary.Web.Extensions
                 var config = new MapperConfiguration(cfg);
                 return new Mapper(config);
             });
+        }
+
+        public static void AddNHibernateORM(this IServiceCollection service, IFluentNHibernateCustomConfig fluentNHibernateCustomConfig)
+        {
+            service.AddSingleton(fluentNHibernateCustomConfig);
+            service.AddScoped<INHibernateHelper, NHibernateHelper>();
         }
     }
 }
