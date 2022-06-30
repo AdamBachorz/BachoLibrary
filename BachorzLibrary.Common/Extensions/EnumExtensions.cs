@@ -19,5 +19,18 @@ namespace BachorzLibrary.Common.Extensions
 
             return enumType?.Description ?? string.Empty;
         }
+
+        public static bool IsAnyOf<E>(this E @enum, E[] enums) where E : struct, IConvertible 
+        {
+            foreach (var item in enums)
+            {
+                if (@enum.Equals(item))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
