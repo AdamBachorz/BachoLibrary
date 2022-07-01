@@ -9,7 +9,7 @@ namespace BachorzLibrary.Web.Extensions
 {
     public static  class ServiceCollectionExtensions
     {
-        public static void AddAutoMapperFixture(this IServiceCollection service, MapperConfigurationExpression cfg)
+        public static void AddObjectMappingConfiguration(this IServiceCollection service, MapperConfigurationExpression cfg)
         {
             service.AddSingleton<IMapper>(service => {
                 var config = new MapperConfiguration(cfg);
