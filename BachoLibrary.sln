@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31019.35
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BachoLibrary.Tests", "BachoLibrary.Tests\BachoLibrary.Tests.csproj", "{1CD459E1-5431-419C-AA2A-99D12A76E05A}"
 EndProject
@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BachorzLibrary.Web", "Bacho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.Desktop", "BachorzLibrary.Desktop\BachorzLibrary.Desktop.csproj", "{266C961F-9AB9-45C6-93B4-625A6FF68921}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.DesktopHelperApp", "BachorzLibrary.DesktopHelperApp\BachorzLibrary.DesktopHelperApp.csproj", "{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BachorzLibrary.DesktopHelperApp", "BachorzLibrary.DesktopHelperApp\BachorzLibrary.DesktopHelperApp.csproj", "{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.DAL.DotNetSix", "BachorzLibrary.DAL.DotNetSix\BachorzLibrary.DAL.DotNetSix.csproj", "{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
