@@ -16,14 +16,14 @@ namespace BachoLibrary.Tests.Common.Extensions
 
             Assert.True(pastDate.IsFromPast());
         }
-        
+
         [Test]
         public void ShouldReturnDifference_TimeDifferenceInSec()
         {
             DateTime? date1 = new DateTime(2020, 1, 1, 22, 22, 10);
             DateTime date2 = new DateTime(2020, 1, 1, 22, 22, 40);
 
-            var difference = date1.TimeDifferenceInSec(date2); 
+            var difference = date1.TimeDifferenceInSec(date2);
 
             Assert.That(difference, Is.EqualTo(30));
         }
@@ -43,6 +43,26 @@ namespace BachoLibrary.Tests.Common.Extensions
             Assert.False(dateBetweenRight.IsBetween(date1, date2, includeLeftBound: true, includeRightBound: false));
             Assert.False(dateOutOfRange.IsBetween(date1, date2, true, true));
 
+        }
+
+        [Test]
+        public void ShouldReturn_DaySpan()
+        {
+            DateTime date1 = new DateTime(2021, 12, 31);
+            DateTime date2 = new DateTime(2022, 1, 10);
+            var excludeDates = new List<Tuple<int, int>> { Tuple.Create(6, 1) };
+
+            DateTime date3 = new DateTime(2022, 1, 10);
+            DateTime date4 = new DateTime(2022, 1, 11);
+
+            var daySpan1to2 = date1.DaySpan(date2, true, excludeDates);
+            var daySpan3to4 = date3.DaySpan(date4, false);
+
+            Assert.Multiple(() => 
+            {
+                Assert.That(daySpan1to2, Is.EqualTo(6));
+                Assert.That(daySpan3to4, Is.EqualTo(1));
+            });
         }
     }
 }

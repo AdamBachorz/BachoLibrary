@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BachorzLibrary.DAL.DAO
 {
-    public interface IBaseDao<E>
+    public interface IBaseDao<E, IdType>
     {
-        E GetOneById(int id);
+        E GetOneById(IdType id);
         E GetLatest();
         IList<E> GetAll();
         IQueryable<E> GetAllLazy();
         E Insert(E entity);
-        void Update(int id, E entity);
+        void Update(IdType id, E entity);
         void Update(E entity);
-        void Delete(int id);
+        void Delete(IdType id);
     }
 }

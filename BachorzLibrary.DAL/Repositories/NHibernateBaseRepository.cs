@@ -1,4 +1,5 @@
-﻿using BachorzLibrary.DAL.DAO;
+﻿using BachorzLibrary.Common.DbModel;
+using BachorzLibrary.DAL.DAO;
 using BachorzLibrary.DAL.NHibernate;
 using System;
 using System.Collections.Generic;

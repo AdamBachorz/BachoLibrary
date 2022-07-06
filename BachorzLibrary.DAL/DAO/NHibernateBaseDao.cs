@@ -1,4 +1,5 @@
-﻿using BachorzLibrary.DAL.NHibernate;
+﻿using BachorzLibrary.Common.DbModel;
+using BachorzLibrary.DAL.NHibernate;
 using NHibernate;
 using NHibernate.Criterion;
 using System;
@@ -9,7 +10,8 @@ using System.Linq;
 
 namespace BachorzLibrary.DAL.DAO
 {
-    public abstract class NHibernateBaseDao<E> : IBaseDao<E> where E : Entity 
+    // TODO: change to generic ID type
+    public abstract class NHibernateBaseDao<E> : IBaseDao<E, int> where E : Entity 
     {
         protected readonly INHibernateHelper _nHibernateHelper;
 

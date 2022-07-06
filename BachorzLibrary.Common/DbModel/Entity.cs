@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace BachorzLibrary.DAL
+namespace BachorzLibrary.Common.DbModel
 {
     [Serializable]
     public abstract class Entity<T>

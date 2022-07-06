@@ -1,4 +1,5 @@
-﻿using BachorzLibrary.NHibernate.Extensions;
+﻿using BachorzLibrary.Common.DbModel;
+using BachorzLibrary.NHibernate.Extensions;
 using FluentNHibernate.Mapping;
 using System;
 using System.Collections.Generic;

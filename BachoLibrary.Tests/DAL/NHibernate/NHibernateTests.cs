@@ -6,6 +6,7 @@ using NUnit.Framework;
 using BachorzLibrary.DAL;
 using System.ComponentModel;
 using BachorzLibrary.DAL.DAO;
+using BachorzLibrary.Common.DbModel;
 
 namespace BachorzLibrary.Tests.DAL.NHibernate
 {
@@ -14,7 +15,7 @@ namespace BachorzLibrary.Tests.DAL.NHibernate
     {
         IFluentNHibernateCustomConfig _config;
         INHibernateHelper _nHibernateHelper;
-        IBaseDao<User> _dao;
+        IBaseDao<User, int> _dao;
 
         [Serializable]
         class User : Entity
