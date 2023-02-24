@@ -59,6 +59,16 @@ namespace BachorzLibrary.DAL.DAO
             });
         }
 
+        public IList<E> GetByIds(IEnumerable<int> ids)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<E> DbSet()
+        {
+            throw new NotImplementedException();
+        }
+
 
         #region Invokers
         protected R Invoke<R>(Func<ISession, R> func)

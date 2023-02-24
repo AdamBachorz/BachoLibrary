@@ -19,13 +19,6 @@ namespace BachorzLibrary.DAL.DotNetSix.DAO
             _db = db;
         }
 
-        public virtual void Delete(IdType id)
-        {
-            var entityToDelete = GetOneById(id);
-            _db.Entry(entityToDelete).State = EntityState.Deleted;
-            _db.SaveChanges();
-        }
-
         public virtual IList<E> GetAll()
         {
             return _db.Set<E>().ToList();
@@ -77,5 +70,11 @@ namespace BachorzLibrary.DAL.DotNetSix.DAO
             _db.SaveChanges();
         }
 
+        public virtual void Delete(IdType id)
+        {
+            var entityToDelete = GetOneById(id);
+            _db.Entry(entityToDelete).State = EntityState.Deleted;
+            _db.SaveChanges();
+        }
     }
 }

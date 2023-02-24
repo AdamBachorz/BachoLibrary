@@ -49,6 +49,18 @@ namespace BachorzLibrary.Common.Extensions
 
         public static int DaySpan(this DateTime fromDate, DateTime toDate, bool excludeWeekends, IList<Tuple<int, int>> excludeDates = null)
         {
+            if (fromDate.CompareTo(toDate) == 0)
+            {
+                return 1;
+            }
+
+            if (fromDate.CompareTo(toDate) > 0)
+            {
+                var tmp = fromDate;
+                fromDate = toDate;
+                toDate = tmp;
+            }// TODO Cover with tests
+
             var count = 0;
             for (DateTime index = fromDate; index <= toDate; index = index.AddDays(1))
             {
@@ -56,7 +68,7 @@ namespace BachorzLibrary.Common.Extensions
                 { 
                     continue; 
                 }
-                var excluded = excludeDates.Any(t => index.Date.Day == t.Item1 && index.Date.Month == t.Item2);
+                var excluded = excludeDates?.Any(t => index.Date.Day == t.Item1 && index.Date.Month == t.Item2) ?? false;
                 if (!excluded)
                 {
                     count++;

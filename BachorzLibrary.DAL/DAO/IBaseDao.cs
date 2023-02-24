@@ -11,6 +11,8 @@ namespace BachorzLibrary.DAL.DAO
         E GetOneById(IdType id);
         E GetLatest();
         IList<E> GetAll();
+        IList<E> GetByIds(IEnumerable<IdType> ids);
+        IQueryable<E> DbSet();
         IQueryable<E> GetAllLazy();
         E Insert(E entity);
         void Update(IdType id, E entity);

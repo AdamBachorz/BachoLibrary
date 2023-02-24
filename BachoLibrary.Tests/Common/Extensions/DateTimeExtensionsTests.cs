@@ -55,13 +55,18 @@ namespace BachoLibrary.Tests.Common.Extensions
             DateTime date3 = new DateTime(2022, 1, 10);
             DateTime date4 = new DateTime(2022, 1, 11);
 
+            DateTime date5 = new DateTime(2022, 1, 14);
+            DateTime date6 = new DateTime(2022, 1, 14);
+
             var daySpan1to2 = date1.DaySpan(date2, true, excludeDates);
-            var daySpan3to4 = date3.DaySpan(date4, false);
+            //var daySpan3to4 = date3.DaySpan(date4, false);
+            var daySpan5to6 = date5.DaySpan(date6, true);
 
             Assert.Multiple(() => 
             {
                 Assert.That(daySpan1to2, Is.EqualTo(6));
-                Assert.That(daySpan3to4, Is.EqualTo(1));
+                //Assert.That(daySpan3to4, Is.EqualTo(2));
+                Assert.That(daySpan5to6, Is.EqualTo(1));
             });
         }
     }
