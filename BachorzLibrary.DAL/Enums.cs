@@ -6,9 +6,10 @@ namespace BachorzLibrary.DAL
 {
     public enum DataBase
     {
-        MSSQL,
-        PostgreSQL,
-        MySQL
+        MSSQL = 0,
+        PostgreSQL = 1,
+        Sqlite = 2,
+        MySQL = 3,
     }
     public enum IdentityStrategy
     {
