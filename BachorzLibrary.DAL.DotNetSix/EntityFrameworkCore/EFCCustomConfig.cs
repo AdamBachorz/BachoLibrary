@@ -11,6 +11,7 @@ namespace BachorzLibrary.DAL.DotNetSix.EntityFrameworkCore
         public DataBase DataBase { get; set; }
         public bool IsProduction { get; set; }
         public string ConnectionString { get; set; }
+        public Dictionary<string, object> ValuesBag { get; set; } = new();
         public Action<MappingConfiguration> Mapping { get; set; }
 
         public EFCCustomConfig()

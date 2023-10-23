@@ -10,5 +10,6 @@ namespace BachorzLibrary.DAL
         DataBase DataBase { get; set; }
         bool IsProduction { get; set; }
         string ConnectionString { get; set; }
+        Dictionary<string, object> ValuesBag { get; set; }
     }
 }
