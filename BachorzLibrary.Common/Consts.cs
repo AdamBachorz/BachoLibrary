@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BachorzLibrary.Common
+﻿namespace BachorzLibrary.Common
 {
     /// <summary>
     /// 
     /// </summary>
     public static class Consts
     {
-        public const string DefaultStringEnumerator = ", ";
-
         public struct DateFormat
         {
             public const string DayFirst = "dd-MM-yyyy";

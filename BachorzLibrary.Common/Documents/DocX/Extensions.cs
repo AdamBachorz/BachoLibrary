@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xceed.Document.NET;
+﻿using Xceed.Document.NET;
 
 namespace BachorzLibrary.Common.Documents.DocX
 {

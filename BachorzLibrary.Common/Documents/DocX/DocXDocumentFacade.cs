@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xceed.Words.NET;
 using Xceed.Document.NET;
 using System.IO;
 

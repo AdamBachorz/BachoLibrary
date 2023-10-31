@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
-namespace RestApiInmoto.Common.Html
+namespace BachorzLibrary.Common.Tools.Html
 {
     public class HtmlHelper
     {

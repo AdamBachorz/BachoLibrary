@@ -1,7 +1,7 @@
 ﻿using BachorzLibrary.Common.Extensions;
 using System.Text;
 
-namespace RestApiInmoto.Common.Html
+namespace BachorzLibrary.Common.Tools.Html
 {
     public class TableCellContent
     {
