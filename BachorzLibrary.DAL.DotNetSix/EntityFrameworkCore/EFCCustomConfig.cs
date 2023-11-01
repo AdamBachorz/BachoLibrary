@@ -1,8 +1,4 @@
 ﻿using FluentNHibernate.Cfg;
-using FluentNHibernate.Cfg.Db;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BachorzLibrary.DAL.DotNetSix.EntityFrameworkCore
 {
