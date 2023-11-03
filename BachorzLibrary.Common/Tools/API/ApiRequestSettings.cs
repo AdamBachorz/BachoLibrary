@@ -1,10 +1,8 @@
 ﻿using BachorzLibrary.Common.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace BachorzLibrary.Web.API
+namespace BachorzLibrary.Common.Tools.API
 {
     public class ApiRequestSettings<T> where T : class
     {

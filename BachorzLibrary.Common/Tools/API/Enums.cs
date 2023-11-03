@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel;
 
-namespace BachorzLibrary.Web.API
+namespace BachorzLibrary.Common.Tools.API
 {
     public enum ContentType
     {

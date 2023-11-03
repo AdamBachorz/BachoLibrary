@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace BachorzLibrary.Web.API
+namespace BachorzLibrary.Common.Tools.API
 {
     public class ApiValidatorV2<R>
     {

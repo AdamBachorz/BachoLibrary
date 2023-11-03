@@ -1,13 +1,11 @@
 ﻿using BachorzLibrary.Common.Extensions;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Security.Authentication;
 using System.Text;
 
-namespace BachorzLibrary.Web.API
+namespace BachorzLibrary.Common.Tools.API
 {
     public class ApiConnectionV2
     {

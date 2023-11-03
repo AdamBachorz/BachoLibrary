@@ -1,15 +1,11 @@
 ﻿using BachorzLibrary.Common.Extensions;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
 
-namespace BachorzLibrary.Web.API
+namespace BachorzLibrary.Common.Tools.API
 {
     /// <summary>
     /// Klasa do obsługi żądań API

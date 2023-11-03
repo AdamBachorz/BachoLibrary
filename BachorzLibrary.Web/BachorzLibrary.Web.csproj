@@ -20,4 +20,8 @@
     <ProjectReference Include="..\BachorzLibrary.DAL\BachorzLibrary.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
 </Project>

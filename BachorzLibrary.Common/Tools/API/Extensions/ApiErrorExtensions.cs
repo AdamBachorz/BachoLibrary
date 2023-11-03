@@ -1,11 +1,8 @@
-﻿using BachorzLibrary.Common;
-using BachorzLibrary.Common.Extensions;
-using System;
+﻿using BachorzLibrary.Common.Extensions;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace BachorzLibrary.Web.API.Extensions
+namespace BachorzLibrary.Common.Tools.API.Extensions
 {
     public static class ApiErrorExtensions
     {
