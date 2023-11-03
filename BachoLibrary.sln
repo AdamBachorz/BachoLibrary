@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.Desktop", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BachorzLibrary.DesktopHelperApp", "BachorzLibrary.DesktopHelperApp\BachorzLibrary.DesktopHelperApp.csproj", "{EE32DF2B-1813-4BF4-BC4B-F5C143FA81B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.DAL.DotNetSix", "BachorzLibrary.DAL.DotNetSix\BachorzLibrary.DAL.DotNetSix.csproj", "{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BachorzLibrary.DAL.DotNetSix", "BachorzLibrary.DAL.DotNetSix\BachorzLibrary.DAL.DotNetSix.csproj", "{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BachorzLibrary.UnitTestsTools", "BachorzLibrary.UnitTestsTools\BachorzLibrary.UnitTestsTools.csproj", "{C7ABDC06-A691-482C-8A69-94E3908354AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F505B7A-D265-45D5-A572-1EA12AFFE1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7ABDC06-A691-482C-8A69-94E3908354AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7ABDC06-A691-482C-8A69-94E3908354AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7ABDC06-A691-482C-8A69-94E3908354AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7ABDC06-A691-482C-8A69-94E3908354AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
