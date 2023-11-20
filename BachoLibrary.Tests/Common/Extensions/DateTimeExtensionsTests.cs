@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 using BachorzLibrary.Common.Extensions;
 
@@ -37,12 +36,14 @@ namespace BachoLibrary.Tests.Common.Extensions
             DateTime date2 = new DateTime(2020, 1, 1, 22, 22, 40);
             DateTime dateOutOfRange = new DateTime(2020, 1, 1, 22, 22, 45);
 
-            Assert.True(dateBetweenLeft.IsBetween(date1, date2, includeLeftBound: true, includeRightBound: true));
-            Assert.False(dateBetweenLeft.IsBetween(date1, date2, includeLeftBound: false, includeRightBound: false));
-            Assert.True(dateBetweenRight.IsBetween(date1, date2, includeLeftBound: true, includeRightBound: true));
-            Assert.False(dateBetweenRight.IsBetween(date1, date2, includeLeftBound: true, includeRightBound: false));
-            Assert.False(dateOutOfRange.IsBetween(date1, date2, true, true));
-
+            Assert.Multiple(() =>
+            {
+                Assert.True(dateBetweenLeft.IsBetween(date1, date2, includeLeftBound: true, includeRightBound: true));
+                Assert.False(dateBetweenLeft.IsBetween(date1, date2, includeLeftBound: false, includeRightBound: false));
+                Assert.True(dateBetweenRight.IsBetween(date1, date2, includeLeftBound: true, includeRightBound: true));
+                Assert.False(dateBetweenRight.IsBetween(date1, date2, includeLeftBound: true, includeRightBound: false));
+                Assert.False(dateOutOfRange.IsBetween(date1, date2, true, true));
+            });
         }
 
         [Test]
@@ -59,13 +60,11 @@ namespace BachoLibrary.Tests.Common.Extensions
             DateTime date6 = new DateTime(2022, 1, 14);
 
             var daySpan1to2 = date1.DaySpan(date2, true, excludeDates);
-            //var daySpan3to4 = date3.DaySpan(date4, false);
             var daySpan5to6 = date5.DaySpan(date6, true);
 
             Assert.Multiple(() => 
             {
                 Assert.That(daySpan1to2, Is.EqualTo(6));
-                //Assert.That(daySpan3to4, Is.EqualTo(2));
                 Assert.That(daySpan5to6, Is.EqualTo(1));
             });
         }

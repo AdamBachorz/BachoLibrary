@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BachorzLibrary.Common.Extensions
+﻿namespace BachorzLibrary.Common.Extensions
 {
     public static class NumberExtensions
     {

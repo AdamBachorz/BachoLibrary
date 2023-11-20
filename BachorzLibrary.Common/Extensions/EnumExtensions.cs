@@ -2,8 +2,6 @@
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 
 namespace BachorzLibrary.Common.Extensions
 {
@@ -20,7 +18,7 @@ namespace BachorzLibrary.Common.Extensions
             return enumType?.Description ?? string.Empty;
         }
 
-        public static bool IsAnyOf<E>(this E @enum, E[] enums) where E : struct, IConvertible 
+        public static bool IsAnyOf<E>(this E @enum, ICollection<E> enums) where E : struct, IConvertible 
         {
             foreach (var item in enums)
             {

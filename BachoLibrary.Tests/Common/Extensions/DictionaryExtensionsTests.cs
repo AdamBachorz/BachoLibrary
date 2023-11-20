@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
-using BachorzLibrary.Common.Extensions;
 
 namespace BachoLibrary.Tests.Common.Extensions
 {
@@ -25,11 +22,14 @@ namespace BachoLibrary.Tests.Common.Extensions
             var defaultValue = _dictionary.GetValueOrDefault(10, NoValueIndicator);
             var defaultEmptyValue = _dictionary.GetValueOrDefault(10);
 
-            Assert.That(valueFromDictionary, Is.Not.Null);
-            Assert.That(valueFromDictionary, Is.Not.Empty);
-            Assert.That(valueFromDictionary, Is.EqualTo("Number 1"));
-            Assert.That(defaultValue, Is.EqualTo(NoValueIndicator));
-            Assert.That(defaultEmptyValue, Is.Null);
+            Assert.Multiple(() =>
+            {
+                Assert.That(valueFromDictionary, Is.Not.Null);
+                Assert.That(valueFromDictionary, Is.Not.Empty);
+                Assert.That(valueFromDictionary, Is.EqualTo("Number 1"));
+                Assert.That(defaultValue, Is.EqualTo(NoValueIndicator));
+                Assert.That(defaultEmptyValue, Is.Null);
+            });
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using BachorzLibrary.Common.Documents.DocX;
+﻿using BachorzLibrary.Common.Tools.Documents.DocX;
 using System;
 using System.Collections.Generic;
 using System.IO;

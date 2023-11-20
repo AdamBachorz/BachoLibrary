@@ -1,8 +1,4 @@
-﻿using BachorzLibrary.Common.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
+﻿using System.Diagnostics;
 
 namespace BachorzLibrary.Common.Utils
 {

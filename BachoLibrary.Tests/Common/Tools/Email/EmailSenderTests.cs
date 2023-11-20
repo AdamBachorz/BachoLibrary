@@ -16,7 +16,6 @@ namespace BachoLibrary.Tests.Common.Tools.Email
 
             var settings = new EmailSenderSettings
             {
-                SenderValues = _customConfig.ValuesBag["Sender"] as string,
                 SenderHeader = nameof(BachorzLibrary),
             };
             _sut = new EmailSender(settings);

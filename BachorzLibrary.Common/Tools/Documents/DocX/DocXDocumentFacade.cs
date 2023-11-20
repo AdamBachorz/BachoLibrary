@@ -2,7 +2,7 @@
 using Xceed.Document.NET;
 using System.IO;
 
-namespace BachorzLibrary.Common.Documents.DocX
+namespace BachorzLibrary.Common.Tools.Documents.DocX
 {
     public abstract class DocXDocumentFacade
     {
@@ -21,7 +21,7 @@ namespace BachorzLibrary.Common.Documents.DocX
 
         public DocXDocumentFacade(string fileName, bool addHeader = false, bool addFooter = false) : this(new FileInfo(fileName), addHeader, addFooter)
         {
-            
+
         }
 
         public void BuildDocumentAndSave()

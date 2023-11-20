@@ -15,7 +15,7 @@ namespace BachorzLibrary.Common.Extensions
             });
         }
 
-        public static void AddEmailSenderService(this IServiceCollection services, Action<EmailSenderSettings> settingsInvoker)
+        public static void AddEmailSender(this IServiceCollection services, Action<EmailSenderSettings> settingsInvoker)
         {
             var settings = new EmailSenderSettings();
             settingsInvoker(settings);

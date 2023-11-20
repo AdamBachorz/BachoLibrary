@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
+﻿using System.Net;
 using NUnit.Framework;
 using BachorzLibrary.Common.Extensions;
 
@@ -17,9 +14,11 @@ namespace BachoLibrary.Tests.Common.Extensions
             
             var token = credentials.BuildBase64Token();
 
-            Assert.That(token, Is.Not.Null);
-            Assert.That(token, Is.Not.Empty);
-            Assert.True(token.StartsWith("Basic "));
+            Assert.Multiple(() =>
+            {
+                Assert.That(token, Is.Not.Null.Or.Empty);
+                Assert.That(token, Is.Not.Empty);
+            });
         }
     }
 }

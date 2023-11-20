@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BachorzLibrary.Common.Extensions
 {
@@ -51,7 +50,7 @@ namespace BachorzLibrary.Common.Extensions
         {
             if (count > list.Count)
             {
-                throw new ArgumentException("Cannot pick more elements, that list contains");
+                throw new ArgumentException("Cannot pick more elements, then list contains");
             }
 
             return RandomFactory.RandomUniqueNumbers(0, list.Count - 1, count).Select(i => list[i]).ToList();

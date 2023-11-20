@@ -1,10 +1,6 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.RegularExpressions;
 using BachorzLibrary.Common.Extensions;
-using BachorzLibrary.Common;
 
 namespace BachoLibrary.Tests.Common.Extensions
 {
@@ -22,8 +18,11 @@ namespace BachoLibrary.Tests.Common.Extensions
             var groupValue = match.ValueOrDefault(DefaultIp);
             var groupValueDefault = nonMatch.ValueOrDefault(DefaultIp);
 
-            Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
-            Assert.That(groupValueDefault, Is.EqualTo(DefaultIp));
+            Assert.Multiple(() =>
+            {
+                Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
+                Assert.That(groupValueDefault, Is.EqualTo(DefaultIp));
+            });
         }
 
         [Test]
@@ -36,8 +35,11 @@ namespace BachoLibrary.Tests.Common.Extensions
             var groupValue = match.ValueOrEmpty();
             var groupValueDefault = nonMatch.ValueOrEmpty();
 
-            Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
-            Assert.That(groupValueDefault, Is.EqualTo(string.Empty));
+            Assert.Multiple(() =>
+            {
+                Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
+                Assert.That(groupValueDefault, Is.EqualTo(string.Empty));
+            });
         }
 
         [Test]
@@ -51,8 +53,11 @@ namespace BachoLibrary.Tests.Common.Extensions
             var groupValue = match.GroupOrDefault("email", DefaultIp);
             var groupValueDefault = nonMatch.GroupOrDefault("email", DefaultIp);
 
-            Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
-            Assert.That(groupValueDefault, Is.EqualTo(DefaultIp));
+            Assert.Multiple(() =>
+            {
+                Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
+                Assert.That(groupValueDefault, Is.EqualTo(DefaultIp));
+            });
         }
 
         [Test]
@@ -65,8 +70,11 @@ namespace BachoLibrary.Tests.Common.Extensions
             var groupValue = match.GroupOrEmpty("email");
             var groupValueDefault = nonMatch.GroupOrEmpty("email");
 
-            Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
-            Assert.That(groupValueDefault, Is.EqualTo(string.Empty));
+            Assert.Multiple(() =>
+            {
+                Assert.That(groupValue, Is.EqualTo("192.168.1.1"));
+                Assert.That(groupValueDefault, Is.EqualTo(string.Empty));
+            });
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Xceed.Document.NET;
 
-namespace BachorzLibrary.Common.Documents.DocX
+namespace BachorzLibrary.Common.Tools.Documents.DocX
 {
     public static class Extensions
     {
