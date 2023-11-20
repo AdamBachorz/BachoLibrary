@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace BachorzLibrary.Common.Extensions
 {
@@ -16,7 +15,10 @@ namespace BachorzLibrary.Common.Extensions
         }
 
         public static void AddIfNotNull<E>(this ICollection<E> collection, E element) => AddPredicatedOn(collection, element, e => e != null);
+        
         public static void AddIfNotExists<E>(this ICollection<E> collection, E element) => AddPredicatedOn(collection, element, e => !collection.Contains(e));
 
+        public static E PickOneWithMinimum<E>(this ICollection<E> collection, Func<E, object> property) => collection.OrderBy(property).FirstOrDefault();
+        public static E PickOneWithMaximum<E>(this ICollection<E> collection, Func<E, object> property) => collection.OrderByDescending(property).FirstOrDefault();
     }
 }
