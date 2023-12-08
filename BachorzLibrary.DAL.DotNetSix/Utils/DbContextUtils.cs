@@ -18,13 +18,21 @@ namespace BachorzLibrary.DAL.DotNetSix.Utils
                 }
 
                 var config = JsonConvert.DeserializeObject<EFCCustomConfig>(File.ReadAllText(configFile));
-                if (config.IsProduction)
+
+                switch (config.DataBase)
                 {
-                    optionsBuilder.UseNpgsql(config.ConnectionString);
-                }
-                else
-                {
-                    optionsBuilder.UseSqlite(config.ConnectionString);
+                    case DataBase.PostgreSQL:
+                        optionsBuilder.UseNpgsql(config.ConnectionString);
+                        break;
+                    case DataBase.Sqlite:
+                        optionsBuilder.UseSqlite(config.ConnectionString);
+                        break;
+                    case DataBase.MSSQL:
+                        optionsBuilder.UseSqlServer(config.ConnectionString);
+                        break;
+                    case DataBase.MySQL:
+                    default:
+                        throw new NotSupportedException($"DataBase {config.DataBase} not supported.");     
                 }
             }
         }
