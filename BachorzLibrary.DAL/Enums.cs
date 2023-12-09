@@ -10,6 +10,7 @@ namespace BachorzLibrary.DAL
         PostgreSQL = 1,
         Sqlite = 2,
         MySQL = 3,
+        Oracle = 4,
     }
     public enum IdentityStrategy
     {

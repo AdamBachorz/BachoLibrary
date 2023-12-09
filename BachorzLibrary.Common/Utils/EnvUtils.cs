@@ -5,6 +5,10 @@ namespace BachorzLibrary.Common.Utils
 {
     public static class EnvUtils
     {
+        public static bool IsDev() => GetValueDependingOnEnvironment(true, false);
+
+        public static bool IsProduction() => !IsDev();
+
         public static void PerformDependingOnEnvironment(Action onDev, Action onProd)
         {
 #if DEBUG
