@@ -1,5 +1,4 @@
-﻿using BachorzLibrary.Common.Utils;
-using BachorzLibrary.DAL.DotNetSix.EntityFrameworkCore;
+﻿using BachorzLibrary.DAL.DotNetSix.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -13,8 +12,7 @@ namespace BachorzLibrary.DAL.DotNetSix.Utils
             {
                 if (!File.Exists(configFile))
                 {
-                    throw new FileLoadException("Config file not found", 
-                        EnvUtils.GetValueDependingOnEnvironment("DEV", "PROD"));
+                    throw new FileLoadException("Config file not found", configFile);
                 }
 
                 var config = JsonConvert.DeserializeObject<EFCCustomConfig>(File.ReadAllText(configFile));
