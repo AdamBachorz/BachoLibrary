@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BachorzLibrary.DAL.DotNetSix.DAO
 {
-    public class EFCBaseDao<E, DbC, IdType> : IBaseDao<E, IdType> where E : Entity<IdType> where DbC : BaseDbContext
+    public class EFCBaseDao<E, DbC, IdType> : IBaseDao<E, IdType> where E : Entity<IdType> where DbC : DbContext
     {
         protected DbC _db;
 

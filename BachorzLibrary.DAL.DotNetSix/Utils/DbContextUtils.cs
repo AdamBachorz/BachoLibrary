@@ -6,17 +6,10 @@ namespace BachorzLibrary.DAL.DotNetSix.Utils
 {
     public static class DbContextUtils
     {
-        public static void ExplicitConfig(DbContextOptionsBuilder optionsBuilder, string configFile)
+        public static void ExplicitConfig(DbContextOptionsBuilder optionsBuilder, IEFCCustomConfig config)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                if (!File.Exists(configFile))
-                {
-                    throw new FileLoadException("Config file not found", configFile);
-                }
-
-                var config = JsonConvert.DeserializeObject<EFCCustomConfig>(File.ReadAllText(configFile));
-
                 switch (config.DataBase)
                 {
                     case DataBase.MSSQL:
