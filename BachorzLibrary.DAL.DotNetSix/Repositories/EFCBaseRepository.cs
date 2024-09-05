@@ -1,6 +1,5 @@
 ﻿using BachorzLibrary.Common.DbModel;
 using BachorzLibrary.DAL.DotNetSix.DAO;
-using BachorzLibrary.DAL.DotNetSix.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BachorzLibrary.DAL.DotNetSix.Repositories
